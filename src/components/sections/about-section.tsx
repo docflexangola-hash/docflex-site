@@ -6,7 +6,7 @@ export default function AboutSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="sobre" className="bg-paper py-24">
+    <section id="sobre" className="bg-gradient-to-b from-paper via-primary/[0.03] to-paper py-24">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <motion.div
           className="max-w-3xl mx-auto text-center space-y-8 bg-white/70 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-8"

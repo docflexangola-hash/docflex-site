@@ -24,7 +24,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contacto" className="bg-paper py-24">
+    <section id="contacto" className="bg-gradient-to-b from-paper via-primary/[0.03] to-paper py-24">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <motion.div
           className="text-center mb-16"

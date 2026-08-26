@@ -94,51 +94,51 @@ export default function DeviceMockup({
               </>
             )}
           </svg>
-        </div>
 
-        {/* Scrollable Screen Content */}
-        {src && (
-          <div
-            className="absolute"
-            style={{
-              left: overlay.left,
-              top: overlay.top,
-              width: overlay.width,
-              height: overlay.height,
-              borderRadius: overlay.radius,
-              overflow: "hidden",
-            }}
-          >
+          {/* Scrollable Screen Content */}
+          {src && (
             <div
-              ref={scrollRef}
-              onScroll={handleScroll}
-              className="w-full h-full overflow-y-auto"
-              style={{ scrollbarWidth: "none" }}
+              className="absolute"
+              style={{
+                left: overlay.left,
+                top: overlay.top,
+                width: overlay.width,
+                height: overlay.height,
+                borderRadius: overlay.radius,
+                overflow: "hidden",
+              }}
             >
-              <img
-                src={src}
-                alt={alt}
-                className="w-full h-auto block"
-                draggable={false}
-              />
-            </div>
-
-            {/* Scroll Indicator */}
-            {indicatorVisible && fullPageSrc && (
               <div
-                className="absolute bottom-0 left-0 right-0 flex justify-center pb-3 pointer-events-none transition-opacity duration-300"
-                style={{ opacity: indicatorVisible ? 1 : 0 }}
+                ref={scrollRef}
+                onScroll={handleScroll}
+                className="w-full h-full overflow-y-auto"
+                style={{ scrollbarWidth: "none" }}
               >
-                <div className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1.5">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-white animate-bounce">
-                    <path d="M6 2v8M3 7l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span className="text-white text-[10px] font-mono">scroll</span>
-                </div>
+                <img
+                  src={src}
+                  alt={alt}
+                  className="w-full h-auto block"
+                  draggable={false}
+                />
               </div>
-            )}
-          </div>
-        )}
+
+              {/* Scroll Indicator */}
+              {indicatorVisible && fullPageSrc && (
+                <div
+                  className="absolute bottom-0 left-0 right-0 flex justify-center pb-3 pointer-events-none transition-opacity duration-300"
+                  style={{ opacity: indicatorVisible ? 1 : 0 }}
+                >
+                  <div className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1.5">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-white animate-bounce">
+                      <path d="M6 2v8M3 7l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <span className="text-white text-[10px] font-mono">scroll</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Top gradient overlay */}

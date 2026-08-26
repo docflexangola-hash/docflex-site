@@ -43,7 +43,7 @@ export default function PortfolioSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="portfolio" className="bg-paper py-24">
+    <section id="portfolio" className="bg-gradient-to-b from-paper via-primary/[0.03] to-paper py-24">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <motion.div
           className="text-center mb-16"
