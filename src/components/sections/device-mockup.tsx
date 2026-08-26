@@ -137,17 +137,17 @@ export default function DeviceMockup({
               )}
             </div>
           )}
-          {/* Dynamic Island overlay (iPhone only) */}
+          {/* Dynamic Island overlay (iPhone 14 Pro) */}
           {type === "iphone" && (
             <div
               className="absolute z-10"
               style={{
-                left: "29.76%",
-                top: "1.09%",
-                width: "40.48%",
-                height: "6.52%",
+                left: "33%",
+                top: "3.5%",
+                width: "34%",
+                height: "5.5%",
                 background: "#1a1a1a",
-                borderRadius: "12px",
+                borderRadius: "100px",
               }}
             />
           )}
