@@ -100,7 +100,6 @@ export function LiquidMetalButton({
           );
         }
       } catch (error) {
-        console.error("[DocFlex] Failed to load button shader:", error);
       }
     };
 

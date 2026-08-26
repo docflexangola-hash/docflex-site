@@ -4,7 +4,6 @@ import { useState, useRef, useCallback } from "react";
 
 interface DeviceMockupProps {
   type: "desktop" | "iphone" | "ipad";
-  imageSrc?: string;
   alt: string;
   fullPageSrc?: string;
 }
@@ -41,7 +40,6 @@ const deviceFrame = {
 
 export default function DeviceMockup({
   type,
-  imageSrc,
   alt,
   fullPageSrc,
 }: DeviceMockupProps) {
@@ -54,11 +52,14 @@ export default function DeviceMockup({
 
   const overlay = screenOverlay[type];
   const frame = deviceFrame[type];
-  const src = fullPageSrc || imageSrc;
+  const src = fullPageSrc;
 
   return (
-    <div className="relative group overflow-hidden rounded-xl">
-      <div className="transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-x-2">
+    <div className="relative group device-mockup-group overflow-hidden rounded-xl" style={{ perspective: "1000px" }}>
+      <div className="transition-transform duration-300 group-hover:-translate-y-2" style={{ transform: "rotateX(0deg)" }}>
+        <style>{`
+          .group:hover > div { transform: rotateX(2deg) translateY(-8px); }
+        `}</style>
         {/* SVG Device Frame */}
         <div className="relative w-full" style={{ aspectRatio: frame.ratio }}>
           <svg
@@ -129,7 +130,7 @@ export default function DeviceMockup({
                   style={{ opacity: indicatorVisible ? 1 : 0 }}
                 >
                   <div className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1.5">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-white animate-bounce">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-white">
                       <path d="M6 2v8M3 7l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <span className="text-white text-[10px] font-mono">scroll</span>
@@ -146,7 +147,7 @@ export default function DeviceMockup({
 
       {/* Hide scrollbar for this component */}
       <style>{`
-        .group div::-webkit-scrollbar { display: none; }
+        .device-mockup-group div::-webkit-scrollbar { display: none; }
       `}</style>
     </div>
   );

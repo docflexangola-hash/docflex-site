@@ -117,11 +117,7 @@ export default function LiquidMetalHero({
           </motion.div>
 
           {badge && (
-          <motion.div
-            className="flex justify-center"
-            variants={itemVariants}
-            style={{ opacity: heroLogoOpacity, scale: heroLogoScale }}
-          >
+            <motion.div className="flex justify-center" variants={itemVariants}>
               <Badge
                 variant="secondary"
                 className="bg-white/10 text-white border-white/20 hover:bg-white/20 transition-colors duration-300 backdrop-blur-sm font-mono text-xs tracking-wide px-3 py-1"
