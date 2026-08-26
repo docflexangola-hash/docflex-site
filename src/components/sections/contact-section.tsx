@@ -13,14 +13,33 @@ export default function ContactSection() {
     email: "",
     message: "",
   });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Contacto de ${formData.name}`);
-    const body = encodeURIComponent(
-      `Nome: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-    );
-    window.open(`mailto:docflex.angola@gmail.com?subject=${subject}&body=${body}`);
+    setSending(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setError("Erro ao enviar. Tente novamente.");
+      }
+    } catch {
+      setError("Erro de ligação. Tente novamente.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -116,11 +135,24 @@ export default function ContactSection() {
 
                   <Button
                     type="submit"
+                    disabled={sending}
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                   >
                     <Send className="size-4 mr-2" />
-                    Enviar mensagem
+                    {sending ? "A enviar..." : "Enviar mensagem"}
                   </Button>
+
+                  {sent && (
+                    <p className="text-sm text-green-600 text-center">
+                      Mensagem enviada com sucesso!
+                    </p>
+                  )}
+
+                  {error && (
+                    <p className="text-sm text-red-600 text-center">
+                      {error}
+                    </p>
+                  )}
                 </form>
               </CardContent>
             </Card>
