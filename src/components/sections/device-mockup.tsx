@@ -13,7 +13,7 @@ const screenOverlay = {
     left: "3.33%",
     top: "1.54%",
     width: "93.33%",
-    height: "91.79%",
+    height: "94.36%",
     radius: "32px",
   },
   desktop: {
@@ -71,10 +71,9 @@ export default function DeviceMockup({
             {type === "iphone" && (
               <>
                 <rect x="1" y="1" width="178" height="388" rx="36" fill="#1a1a1a" stroke="#333" strokeWidth="1" />
-                <rect x="6" y="6" width="168" height="378" rx="32" fill="#f5f5f5" />
-                <rect x="60" y="14" width="60" height="24" rx="12" fill="#1a1a1a" />
-                <rect x="6" y="364" width="168" height="20" rx="0" fill="#f5f5f5" />
-                <circle cx="90" cy="375" r="6" fill="none" stroke="#ccc" strokeWidth="1" />
+                <rect x="6" y="6" width="168" height="368" rx="32" fill="#f5f5f5" />
+                <rect x="56" y="14" width="68" height="24" rx="12" fill="#1a1a1a" />
+                <rect x="66" y="380" width="48" height="3" rx="1.5" fill="#333" />
               </>
             )}
             {type === "desktop" && (
