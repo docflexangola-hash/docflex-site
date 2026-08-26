@@ -55,7 +55,7 @@ export default function DifferentialsSection() {
           {differentials.map((item, index) => (
             <motion.div
               key={item.title}
-              className="text-center space-y-4"
+              className="text-center space-y-4 p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/20 shadow-lg"
               initial={
                 prefersReducedMotion
                   ? { opacity: 1 }
@@ -65,7 +65,7 @@ export default function DifferentialsSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="mx-auto flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10">
+              <div className="mx-auto flex items-center justify-center w-14 h-14 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/30">
                 <item.icon className="size-7 text-primary" />
               </div>
               <h3 className="font-heading text-lg font-bold text-foreground">

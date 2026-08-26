@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useScroll, useTransform } from "framer-motion";
 
 interface LiquidMetalHeroProps {
   badge?: string;
@@ -30,6 +31,9 @@ export default function LiquidMetalHero({
 }: LiquidMetalHeroProps) {
   const prefersReducedMotion = useReducedMotion();
   const [hasShaderSupport, setHasShaderSupport] = useState(true);
+  const { scrollY } = useScroll();
+  const heroLogoOpacity = useTransform(scrollY, [0, 150], [1, 0]);
+  const heroLogoScale = useTransform(scrollY, [0, 150], [1, 0.8]);
 
   useEffect(() => {
     try {
@@ -62,7 +66,7 @@ export default function LiquidMetalHero({
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {hasShaderSupport ? (
         <LiquidMetal
           {...liquidMetalPresets[2]}
@@ -113,7 +117,11 @@ export default function LiquidMetalHero({
           </motion.div>
 
           {badge && (
-            <motion.div className="flex justify-center" variants={itemVariants}>
+          <motion.div
+            className="flex justify-center"
+            variants={itemVariants}
+            style={{ opacity: heroLogoOpacity, scale: heroLogoScale }}
+          >
               <Badge
                 variant="secondary"
                 className="bg-white/10 text-white border-white/20 hover:bg-white/20 transition-colors duration-300 backdrop-blur-sm font-mono text-xs tracking-wide px-3 py-1"
@@ -163,7 +171,7 @@ export default function LiquidMetalHero({
           {features.length > 0 && (
             <motion.div className="pt-12" variants={itemVariants}>
               <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.3 }}>
-                <Card className="bg-white/10 border-white/20 backdrop-blur-md shadow-2xl">
+                <Card className="bg-white/15 border-white/20 backdrop-blur-md shadow-2xl">
                   <div className="p-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {features.map((feature, index) => (

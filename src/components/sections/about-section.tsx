@@ -9,7 +9,7 @@ export default function AboutSection() {
     <section id="sobre" className="bg-paper py-24">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <motion.div
-          className="max-w-3xl mx-auto text-center space-y-8"
+          className="max-w-3xl mx-auto text-center space-y-8 bg-white/70 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl p-8"
           initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}

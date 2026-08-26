@@ -9,10 +9,10 @@ const projects = [
     description:
       "Localizador de disponibilidade de numerário em caixas ATM — produto próprio da DocFlex, com mapas em tempo real.",
     href: "https://dinheiroemmao.com",
-    images: {
-      desktop: undefined,
-      iphone: undefined,
-      ipad: undefined,
+    fullPage: {
+      desktop: "/screenshots/dinheiro-em-mao-full-desktop.png",
+      iphone: "/screenshots/dinheiro-em-mao-full-mobile.png",
+      ipad: "/screenshots/dinheiro-em-mao-full-ipad.png",
     },
   },
   {
@@ -20,10 +20,10 @@ const projects = [
     description:
       "Site institucional do Aparthotel Mil Cidades — design editorial de luxo para hospitalidade.",
     href: "https://stitchluxoeditorialangolano.vercel.app/",
-    images: {
-      desktop: undefined,
-      iphone: undefined,
-      ipad: undefined,
+    fullPage: {
+      desktop: "/screenshots/mil-cidades-full-desktop.png",
+      iphone: "/screenshots/mil-cidades-full-mobile.png",
+      ipad: "/screenshots/mil-cidades-full-ipad.png",
     },
   },
   {
@@ -31,10 +31,10 @@ const projects = [
     description:
       "Portal institucional da Academia da Força Aérea — plataforma de informação e serviços académicos.",
     href: "https://stitchportalinstitucionalafanangola.vercel.app/",
-    images: {
-      desktop: undefined,
-      iphone: undefined,
-      ipad: undefined,
+    fullPage: {
+      desktop: "/screenshots/afan-full-desktop.png",
+      iphone: "/screenshots/afan-full-mobile.png",
+      ipad: "/screenshots/afan-full-ipad.png",
     },
   },
 ];
@@ -97,9 +97,8 @@ export default function PortfolioSection() {
                 >
                   <DeviceMockup
                     type="desktop"
-                    imageSrc={project.images.desktop}
+                    fullPageSrc={project.fullPage.desktop}
                     alt={`Desktop de ${project.name}`}
-                    href={project.href}
                   />
                 </motion.div>
 
@@ -115,9 +114,8 @@ export default function PortfolioSection() {
                 >
                   <DeviceMockup
                     type="iphone"
-                    imageSrc={project.images.iphone}
+                    fullPageSrc={project.fullPage.iphone}
                     alt={`iPhone de ${project.name}`}
-                    href={project.href}
                   />
                 </motion.div>
 
@@ -134,11 +132,24 @@ export default function PortfolioSection() {
                 >
                   <DeviceMockup
                     type="ipad"
-                    imageSrc={project.images.ipad}
+                    fullPageSrc={project.fullPage.ipad}
                     alt={`iPad de ${project.name}`}
-                    href={project.href}
                   />
                 </motion.div>
+              </div>
+
+              <div className="text-center">
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[var(--color-brand-blue)] font-semibold text-sm hover:underline underline-offset-4 transition-all"
+                >
+                  Ver site
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform group-hover:translate-x-0.5">
+                    <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
               </div>
             </motion.div>
           ))}

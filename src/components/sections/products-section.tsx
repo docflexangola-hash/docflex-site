@@ -59,10 +59,10 @@ export default function ProductsSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <Card className="h-full bg-white border-border hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full bg-white/70 backdrop-blur-md border-white/20 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/50 backdrop-blur-sm border border-white/30">
                       <product.icon className="size-5 text-primary" />
                     </div>
                     <h3 className="font-heading text-xl font-bold text-foreground">

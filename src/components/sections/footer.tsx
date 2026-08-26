@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-ink text-white py-16">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="space-y-4">
+          <div className="space-y-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
             <div className="flex items-center gap-3">
               <svg
                 viewBox="0 0 1024 1024"
@@ -49,7 +49,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
             <h3 className="font-heading text-lg font-bold">Produtos</h3>
             <ul className="space-y-2">
               {products.map((product) => (
@@ -67,7 +67,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
             <h3 className="font-heading text-lg font-bold">Contacto</h3>
             <div className="space-y-3 text-sm text-silver">
               <div className="flex items-center gap-2">

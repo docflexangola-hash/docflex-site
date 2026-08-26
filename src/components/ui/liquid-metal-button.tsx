@@ -194,7 +194,9 @@ export function LiquidMetalButton({
             {icon && (
               <span
                 style={{
-                  color: "#666666",
+                  background: "linear-gradient(135deg, #FFFFFF 0%, #C7CDD6 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
                   filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5))",
                   transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
                   transform: "scale(1)",
@@ -207,9 +209,11 @@ export function LiquidMetalButton({
             <span
               style={{
                 fontSize: size === "lg" ? "15px" : "14px",
-                color: "#666666",
+                background: "linear-gradient(135deg, #FFFFFF 0%, #C7CDD6 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
                 fontWeight: 500,
-                textShadow: "0px 1px 2px rgba(0, 0, 0, 0.5)",
+                filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5))",
                 transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
                 transform: "scale(1)",
                 whiteSpace: "nowrap",
