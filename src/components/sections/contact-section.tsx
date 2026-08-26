@@ -20,7 +20,7 @@ export default function ContactSection() {
     const body = encodeURIComponent(
       `Nome: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
     );
-    window.open(`mailto:info@docflex.ao?subject=${subject}&body=${body}`);
+    window.open(`mailto:docflex.angola@gmail.com?subject=${subject}&body=${body}`);
   };
 
   return (
@@ -165,7 +165,7 @@ export default function ContactSection() {
               <div className="space-y-2 text-muted-foreground">
                 <p>
                   <strong className="text-foreground">Email:</strong>{" "}
-                  info@docflex.ao
+                  docflex.angola@gmail.com
                 </p>
                 <p>
                   <strong className="text-foreground">Sede:</strong> Benguela,

@@ -85,7 +85,7 @@ export default function Footer() {
                   WhatsApp Business
                 </a>
               </div>
-              <p className="text-silver/60">info@docflex.ao</p>
+              <p className="text-silver/60">docflex.angola@gmail.com</p>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ const screenOverlay = {
     left: "3.33%",
     top: "1.54%",
     width: "93.33%",
-    height: "96.92%",
+    height: "91.79%",
     radius: "32px",
   },
   desktop: {
