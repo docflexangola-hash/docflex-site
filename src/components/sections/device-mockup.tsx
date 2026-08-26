@@ -11,9 +11,9 @@ interface DeviceMockupProps {
 const screenOverlay = {
   iphone: {
     left: "3.33%",
-    top: "1.54%",
+    top: "2.56%",
     width: "93.33%",
-    height: "94.36%",
+    height: "93.33%",
     radius: "32px",
   },
   desktop: {
@@ -71,8 +71,7 @@ export default function DeviceMockup({
             {type === "iphone" && (
               <>
                 <rect x="1" y="1" width="178" height="388" rx="36" fill="#1a1a1a" stroke="#333" strokeWidth="1" />
-                <rect x="6" y="6" width="168" height="368" rx="32" fill="#f5f5f5" />
-                <rect x="56" y="14" width="68" height="24" rx="12" fill="#1a1a1a" />
+                <rect x="6" y="10" width="168" height="364" rx="32" fill="#f5f5f5" />
                 <rect x="66" y="380" width="48" height="3" rx="1.5" fill="#333" />
               </>
             )}
@@ -137,6 +136,20 @@ export default function DeviceMockup({
                 </div>
               )}
             </div>
+          )}
+          {/* Dynamic Island overlay (iPhone only) */}
+          {type === "iphone" && (
+            <div
+              className="absolute z-10"
+              style={{
+                left: "29.76%",
+                top: "1.09%",
+                width: "40.48%",
+                height: "6.52%",
+                background: "#1a1a1a",
+                borderRadius: "12px",
+              }}
+            />
           )}
         </div>
       </div>
