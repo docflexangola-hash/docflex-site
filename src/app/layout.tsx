@@ -11,6 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 const ibmPlexMono = IBM_Plex_Mono({

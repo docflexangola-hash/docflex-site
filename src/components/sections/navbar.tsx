@@ -42,7 +42,7 @@ export default function Navbar() {
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5, delay: 3.2 }}
+      transition={{ duration: 0.5, delay: 1.7 }}
     >
       <nav className="container mx-auto px-6 lg:px-8 max-w-7xl flex items-center justify-between h-16">
         <a

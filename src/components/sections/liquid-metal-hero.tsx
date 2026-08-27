@@ -36,6 +36,11 @@ export default function LiquidMetalHero({
   const heroLogoScale = useTransform(scrollY, [0, 150], [1, 0.8]);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) {
+      setHasShaderSupport(false);
+      return;
+    }
     try {
       const canvas = document.createElement("canvas");
       const gl = canvas.getContext("webgl") || canvas.getContext("webgl2");

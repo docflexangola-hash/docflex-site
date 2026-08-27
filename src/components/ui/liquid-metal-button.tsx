@@ -50,6 +50,9 @@ export function LiquidMetalButton({
   }, [size]);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) return;
+
     const styleId = "shader-button-style";
     if (!document.getElementById(styleId)) {
       const style = document.createElement("style");

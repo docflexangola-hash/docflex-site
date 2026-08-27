@@ -1,16 +1,29 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import SplashScreen from "@/components/sections/splash-screen";
 import Navbar from "@/components/sections/navbar";
 import LiquidMetalHero from "@/components/sections/liquid-metal-hero";
 import AboutSection from "@/components/sections/about-section";
 import ServicesSection from "@/components/sections/services-section";
 import ProductsSection from "@/components/sections/products-section";
-import PortfolioSection from "@/components/sections/portfolio-section";
-import DifferentialsSection from "@/components/sections/differentials-section";
-import ContactSection from "@/components/sections/contact-section";
-import Footer from "@/components/sections/footer";
+
+const PortfolioSection = dynamic(
+  () => import("@/components/sections/portfolio-section"),
+  { ssr: false }
+);
+const DifferentialsSection = dynamic(
+  () => import("@/components/sections/differentials-section"),
+  { ssr: false }
+);
+const ContactSection = dynamic(
+  () => import("@/components/sections/contact-section"),
+  { ssr: false }
+);
+const Footer = dynamic(() => import("@/components/sections/footer"), {
+  ssr: false,
+});
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);

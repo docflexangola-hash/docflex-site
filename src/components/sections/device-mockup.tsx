@@ -118,6 +118,8 @@ export default function DeviceMockup({
                   alt={alt}
                   className="w-full h-auto block"
                   draggable={false}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

@@ -10,9 +10,9 @@ const projects = [
       "Localizador de disponibilidade de numerário em caixas ATM — produto próprio da DocFlex, com mapas em tempo real.",
     href: "https://dinheiroemmao.com",
     fullPage: {
-      desktop: "/screenshots/dinheiro-em-mao-full-desktop.png",
-      iphone: "/screenshots/dinheiro-em-mao-full-mobile.png",
-      ipad: "/screenshots/dinheiro-em-mao-full-ipad.png",
+      desktop: "/screenshots/dinheiro-em-mao-full-desktop.webp",
+      iphone: "/screenshots/dinheiro-em-mao-full-mobile.webp",
+      ipad: "/screenshots/dinheiro-em-mao-full-ipad.webp",
     },
   },
   {
@@ -21,9 +21,9 @@ const projects = [
       "Site institucional do Aparthotel Mil Cidades — design editorial de luxo para hospitalidade.",
     href: "https://stitchluxoeditorialangolano.vercel.app/",
     fullPage: {
-      desktop: "/screenshots/mil-cidades-full-desktop.png",
-      iphone: "/screenshots/mil-cidades-full-mobile.png",
-      ipad: "/screenshots/mil-cidades-full-ipad.png",
+      desktop: "/screenshots/mil-cidades-full-desktop.webp",
+      iphone: "/screenshots/mil-cidades-full-mobile.webp",
+      ipad: "/screenshots/mil-cidades-full-ipad.webp",
     },
   },
   {
@@ -32,9 +32,9 @@ const projects = [
       "Portal institucional da Academia da Força Aérea — plataforma de informação e serviços académicos.",
     href: "https://stitchportalinstitucionalafanangola.vercel.app/",
     fullPage: {
-      desktop: "/screenshots/afan-full-desktop.png",
-      iphone: "/screenshots/afan-full-mobile.png",
-      ipad: "/screenshots/afan-full-ipad.png",
+      desktop: "/screenshots/afan-full-desktop.webp",
+      iphone: "/screenshots/afan-full-mobile.webp",
+      ipad: "/screenshots/afan-full-ipad.webp",
     },
   },
 ];
