@@ -5,6 +5,7 @@ import SplashScreen from "@/components/sections/splash-screen";
 import Navbar from "@/components/sections/navbar";
 import LiquidMetalHero from "@/components/sections/liquid-metal-hero";
 import AboutSection from "@/components/sections/about-section";
+import ServicesSection from "@/components/sections/services-section";
 import ProductsSection from "@/components/sections/products-section";
 import PortfolioSection from "@/components/sections/portfolio-section";
 import DifferentialsSection from "@/components/sections/differentials-section";
@@ -23,22 +24,23 @@ export default function Home() {
 
         <LiquidMetalHero
           badge="Empresa de tecnologia — Benguela, Angola"
-          title="Produtos digitais para os desafios reais de Angola"
-          subtitle="Construímos ferramentas próprias para problemas concretos do mercado angolano — do acesso a numerário à automação de atendimento via WhatsApp."
+          title="Desenvolvimento de sites, apps e soluções digitais para Angola"
+          subtitle="Construímos sites, aplicações mobile e integrações com Multicaixa Express. Consultoria, automação e gestão de bases de dados — tudo sob medida para o mercado angolano."
           primaryCtaLabel="Falar no WhatsApp"
-          secondaryCtaLabel="Conhecer os produtos"
+          secondaryCtaLabel="Conhecer os serviços"
           onPrimaryCtaClick={() =>
             window.open("https://wa.me/244933986318", "_blank")
           }
           onSecondaryCtaClick={() =>
             document
-              .getElementById("produtos")
+              .getElementById("servicos")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          features={["Feito para Angola", "Mobile-first", "Suporte directo via WhatsApp"]}
+          features={["Desenvolvimento de Sites", "Integração Multicaixa Express", "Suporte directo via WhatsApp"]}
         />
 
         <AboutSection />
+        <ServicesSection />
         <ProductsSection />
         <PortfolioSection />
         <DifferentialsSection />

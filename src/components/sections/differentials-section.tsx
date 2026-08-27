@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Smartphone, Globe, Headphones, CreditCard } from "lucide-react";
+import { Smartphone, Globe, Headphones, CreditCard, Zap, Database } from "lucide-react";
 
 const differentials = [
   {
@@ -24,9 +24,21 @@ const differentials = [
   },
   {
     icon: CreditCard,
-    title: "Integrações locais",
+    title: "Integração Multicaixa Express",
     description:
-      "Integramos com WhatsApp Business e Multicaixa Express, as ferramentas que os angolanos já usam no dia a dia.",
+      "Integramos pagamentos via Multicaixa Express para e-commerce e sistemas de gestão — a plataforma que Angola já usa.",
+  },
+  {
+    icon: Zap,
+    title: "Automação inteligente",
+    description:
+      "Automatizamos workflows e integramos sistemas para reduzir trabalho manual e aumentar a eficiência.",
+  },
+  {
+    icon: Database,
+    title: "Gestão de dados",
+    description:
+      "Projecto, optimização e administração de bases de dados robustas para empresas de todos os tamanhos.",
   },
 ];
 
@@ -51,7 +63,7 @@ export default function DifferentialsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {differentials.map((item, index) => (
             <motion.div
               key={item.title}

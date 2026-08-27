@@ -21,18 +21,18 @@ export default function AboutSection() {
 
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              A DocFlex Angola é uma empresa de tecnologia sediada em Benguela,
-              dedicada à construção de produtos digitais próprios, pensados para
-              resolver problemas reais do mercado angolano. Acreditamos que a
-              tecnologia deve ser acessível, prática e adaptada à realidade local.
+              A DocFlex Angola é a empresa líder em desenvolvimento de sites e
+              aplicações mobile em Benguela, Angola. Oferecemos serviços completos
+              de tecnologia: criação de sites institucionais e e-commerce, desenvolvimento
+              de apps iOS e Android, integração com Multicaixa Express, consultoria
+              tecnológica, gestão de bases de dados e automação de processos.
             </p>
 
             <p>
-              Do acesso rápido a numerário em caixas ATM à automação de
-              atendimento via WhatsApp, os nossos produtos nascem de desafios
-              concretos do dia a dia em Angola. Trabalhamos com uma abordagem
-              mobile-first, considerando as limitações de conectividade e as
-              necessidades específicas dos utilizadores angolanos.
+              Acreditamos que a tecnologia deve ser acessível, prática e adaptada
+              à realidade angolana. Trabalhamos com uma abordagem mobile-first,
+              considerando as limitações de conectividade e as necessidades
+              específicas dos utilizadores angolanos.
             </p>
 
             <p>
